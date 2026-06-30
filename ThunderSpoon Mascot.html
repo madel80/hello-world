@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ThunderSpoon — Mascot & Robot Logos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#182B4D; --red:#EC5A35; --gold:#E7B23E; --gold-lt:#F6D262; --cream:#F4EEE0;
+  }
+  *{ box-sizing:border-box; }
+  body{ margin:0; font-family:'Poppins',system-ui,sans-serif; background:#E9E3D6; color:var(--navy); padding:56px 40px 96px; }
+  .wrap{ max-width:1180px; margin:0 auto; }
+  header h1{ font-size:15px; letter-spacing:.32em; text-transform:uppercase; color:#9a917f; font-weight:600; margin:0 0 4px; }
+  header p{ margin:0 0 40px; font-size:14px; color:#9a917f; font-weight:500; }
+
+  .section{ margin-bottom:64px; }
+  .section > h2{ font-size:13px; letter-spacing:.28em; text-transform:uppercase; color:#8c8472; font-weight:600; margin:0 0 18px; }
+  .row{ display:flex; flex-wrap:wrap; gap:28px; }
+
+  .card{ background:#fff; border-radius:22px; padding:34px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:18px; box-shadow:0 1px 2px rgba(0,0,0,.04), 0 14px 40px rgba(24,43,77,.06); }
+  .card.cream{ background:var(--cream); }
+  .card.navy{ background:var(--navy); }
+  .cap{ font-size:12px; letter-spacing:.06em; color:#a59c8a; font-weight:600; }
+  .card.navy .cap{ color:#6f7b93; }
+
+  /* wordmark */
+  .wordmark{ font-weight:800; letter-spacing:-.02em; line-height:1; font-size:46px; }
+  .wordmark .thunder{ color:var(--navy); }
+  .wordmark .spoon{ color:var(--red); }
+  .card.navy .wordmark .thunder{ color:#fff; }
+
+  .lockup{ display:flex; flex-direction:column; align-items:center; gap:22px; }
+
+  .small-row{ display:flex; align-items:flex-end; gap:34px; }
+  .small-row .s-item{ display:flex; flex-direction:column; align-items:center; gap:10px; }
+  .small-row .s-item small{ font-size:11px; color:#a59c8a; font-weight:600; }
+
+  .tile{ border-radius:24%; display:flex; align-items:center; justify-content:center; }
+  .tile.cream{ background:var(--cream); }
+  .tile.navy{ background:var(--navy); }
+  .tile.red{ background:var(--red); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>ThunderSpoon</h1>
+    <p>Mascot &amp; robot logo system · navy / orange-red / gold · bold flat-line illustration</p>
+  </header>
+
+  <!-- ===== SVG SYMBOL DEFINITIONS ===== -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <!-- ---------- SPOON MASCOT ---------- -->
+      <symbol id="spoon" viewBox="0 0 400 460">
+        <g fill="none" stroke="#182B4D" stroke-width="10" stroke-linejoin="round" stroke-linecap="round">
+          <!-- navy splash droplets (left) -->
+          <path d="M122 72 q-24 18 -12 42" stroke-width="9"/>
+          <circle cx="100" cy="98" r="4" fill="#182B4D"/>
+          <circle cx="122" cy="124" r="4" fill="#182B4D"/>
+          <circle cx="92" cy="128" r="4" fill="#182B4D"/>
+          <!-- navy 4-point sparkle -->
+          <path d="M170 34 C174 51 178 55 195 59 C178 63 174 67 170 84 C166 67 162 63 145 59 C162 55 166 51 170 34 Z" fill="#182B4D" stroke-width="0"/>
+          <!-- orange splash (right) -->
+          <path d="M304 150 q36 6 42 38" stroke="#EC5A35" stroke-width="13"/>
+          <path d="M316 198 q15 2 17 17" stroke="#EC5A35" stroke-width="11"/>
+          <!-- gold star (bottom right) -->
+          <path d="M316 252 l10 20 22 3 -16 16 4 22 -20 -11 -20 11 4 -22 -16 -16 22 -3 Z" fill="#E7B23E"/>
+          <!-- red neck connector (behind bolt) -->
+          <path d="M224 132 L206 182" stroke="#EC5A35" stroke-width="30" stroke-linecap="round"/>
+          <!-- spoon bowl (red, tilted) -->
+          <ellipse cx="250" cy="108" rx="60" ry="45" fill="#EC5A35" transform="rotate(-32 250 108)"/>
+          <!-- bowl shine -->
+          <path d="M236 66 q24 -11 43 6" stroke="#fff" stroke-width="7"/>
+          <!-- face -->
+          <path d="M222 94 q9 -11 18 0" stroke-width="7"/>
+          <path d="M256 83 q9 -11 18 0" stroke-width="7"/>
+          <path d="M228 108 q19 20 36 -2" stroke-width="7"/>
+          <!-- lightning bolt handle (gold) -->
+          <path d="M214 152 L248 138 L196 228 L228 218 L150 414 L184 270 L150 282 Z" fill="#E7B23E"/>
+          <!-- inner light streak -->
+          <path d="M212 178 L190 234" stroke="#F6D262" stroke-width="8"/>
+          <path d="M198 288 L174 356" stroke="#F6D262" stroke-width="8"/>
+        </g>
+      </symbol>
+
+      <!-- ---------- ROBOT HEAD ---------- -->
+      <symbol id="robot" viewBox="0 0 240 272">
+        <g fill="none" stroke="#182B4D" stroke-width="10" stroke-linejoin="round" stroke-linecap="round">
+          <!-- antenna -->
+          <line x1="120" y1="62" x2="120" y2="34"/>
+          <circle cx="120" cy="25" r="11" fill="#E7B23E"/>
+          <!-- ears -->
+          <rect x="24" y="120" width="20" height="36" rx="8" fill="#EC5A35"/>
+          <rect x="196" y="120" width="20" height="36" rx="8" fill="#EC5A35"/>
+          <!-- head -->
+          <rect x="44" y="60" width="152" height="150" rx="26" fill="#F4EEE0"/>
+          <!-- eyes -->
+          <circle cx="92" cy="120" r="21" fill="#fff"/>
+          <circle cx="92" cy="120" r="9.5" fill="#E7B23E" stroke="none"/>
+          <circle cx="148" cy="120" r="21" fill="#fff"/>
+          <circle cx="148" cy="120" r="9.5" fill="#E7B23E" stroke="none"/>
+          <!-- nose -->
+          <path d="M120 138 l11 23 -22 0 Z" fill="#E7B23E" stroke-width="7"/>
+          <!-- mouth grille -->
+          <rect x="80" y="174" width="80" height="26" rx="9" fill="#182B4D"/>
+          <line x1="98" y1="176" x2="98" y2="198" stroke="#F4EEE0" stroke-width="5"/>
+          <line x1="120" y1="176" x2="120" y2="198" stroke="#F4EEE0" stroke-width="5"/>
+          <line x1="142" y1="176" x2="142" y2="198" stroke="#F4EEE0" stroke-width="5"/>
+        </g>
+      </symbol>
+    </defs>
+  </svg>
+
+  <!-- ===== SPOON MASCOT + WORDMARK ===== -->
+  <div class="section">
+    <h2>01 · ThunderSpoon mascot — primary lockup</h2>
+    <div class="row">
+      <div class="card" style="flex:1; min-width:340px;">
+        <div class="lockup">
+          <svg width="230" height="265"><use href="#spoon"/></svg>
+          <div class="wordmark"><span class="thunder">Thunder</span><span class="spoon">Spoon</span></div>
+        </div>
+        <div class="cap">On white</div>
+      </div>
+      <div class="card cream" style="flex:1; min-width:340px;">
+        <div class="lockup">
+          <svg width="230" height="265"><use href="#spoon"/></svg>
+          <div class="wordmark"><span class="thunder">Thunder</span><span class="spoon">Spoon</span></div>
+        </div>
+        <div class="cap">On cream</div>
+      </div>
+      <div class="card navy" style="flex:1; min-width:340px;">
+        <div class="lockup">
+          <svg width="230" height="265"><use href="#spoon-rev"/></svg>
+          <div class="wordmark"><span class="thunder">Thunder</span><span class="spoon">Spoon</span></div>
+        </div>
+        <div class="cap">On navy</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== ROBOT ICON ===== -->
+  <div class="section">
+    <h2>02 · Robot icon — icon only, built to scale down</h2>
+    <div class="row">
+      <div class="card" style="min-width:260px;">
+        <svg width="200" height="226"><use href="#robot"/></svg>
+        <div class="cap">Master icon</div>
+      </div>
+      <div class="card" style="min-width:260px;">
+        <div class="tile cream" style="width:180px;height:180px;">
+          <svg width="148" height="167"><use href="#robot"/></svg>
+        </div>
+        <div class="cap">App tile · cream</div>
+      </div>
+      <div class="card navy" style="min-width:260px;">
+        <div class="tile navy" style="width:180px;height:180px;box-shadow:inset 0 0 0 2px rgba(255,255,255,.08);">
+          <svg width="148" height="167"><use href="#robot-rev"/></svg>
+        </div>
+        <div class="cap">App tile · dark</div>
+      </div>
+    </div>
+
+    <div class="row" style="margin-top:28px;">
+      <div class="card" style="flex:1;">
+        <div class="small-row">
+          <div class="s-item"><svg width="72" height="81"><use href="#robot"/></svg><small>72px</small></div>
+          <div class="s-item"><svg width="48" height="54"><use href="#robot"/></svg><small>48px</small></div>
+          <div class="s-item"><svg width="32" height="36"><use href="#robot"/></svg><small>32px · favicon</small></div>
+          <div class="s-item"><svg width="24" height="27"><use href="#robot"/></svg><small>24px</small></div>
+          <div class="s-item"><svg width="16" height="18"><use href="#robot"/></svg><small>16px</small></div>
+        </div>
+        <div class="cap">Small-size legibility test</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- reversed symbols for dark backgrounds -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="spoon-rev" viewBox="0 0 400 460">
+      <g fill="none" stroke="#F4EEE0" stroke-width="10" stroke-linejoin="round" stroke-linecap="round">
+        <path d="M122 72 q-24 18 -12 42" stroke-width="9"/>
+        <circle cx="100" cy="98" r="4" fill="#F4EEE0"/>
+        <circle cx="122" cy="124" r="4" fill="#F4EEE0"/>
+        <circle cx="92" cy="128" r="4" fill="#F4EEE0"/>
+        <path d="M170 34 C174 51 178 55 195 59 C178 63 174 67 170 84 C166 67 162 63 145 59 C162 55 166 51 170 34 Z" fill="#E7B23E" stroke-width="0"/>
+        <path d="M304 150 q36 6 42 38" stroke="#EC5A35" stroke-width="13"/>
+        <path d="M316 198 q15 2 17 17" stroke="#EC5A35" stroke-width="11"/>
+        <path d="M316 252 l10 20 22 3 -16 16 4 22 -20 -11 -20 11 4 -22 -16 -16 22 -3 Z" fill="#E7B23E"/>
+        <path d="M224 132 L206 182" stroke="#EC5A35" stroke-width="30" stroke-linecap="round"/>
+        <ellipse cx="250" cy="108" rx="60" ry="45" fill="#EC5A35" transform="rotate(-32 250 108)"/>
+        <path d="M236 66 q24 -11 43 6" stroke="#fff" stroke-width="7"/>
+        <path d="M222 94 q9 -11 18 0" stroke-width="7"/>
+        <path d="M256 83 q9 -11 18 0" stroke-width="7"/>
+        <path d="M228 108 q19 20 36 -2" stroke-width="7"/>
+        <path d="M214 152 L248 138 L196 228 L228 218 L150 414 L184 270 L150 282 Z" fill="#E7B23E"/>
+        <path d="M212 178 L190 234" stroke="#F6D262" stroke-width="8"/>
+        <path d="M198 288 L174 356" stroke="#F6D262" stroke-width="8"/>
+      </g>
+    </symbol>
+    <symbol id="robot-rev" viewBox="0 0 240 272">
+      <g fill="none" stroke="#F4EEE0" stroke-width="10" stroke-linejoin="round" stroke-linecap="round">
+        <line x1="120" y1="62" x2="120" y2="34"/>
+        <circle cx="120" cy="25" r="11" fill="#E7B23E"/>
+        <rect x="24" y="120" width="20" height="36" rx="8" fill="#EC5A35"/>
+        <rect x="196" y="120" width="20" height="36" rx="8" fill="#EC5A35"/>
+        <rect x="44" y="60" width="152" height="150" rx="26" fill="#22365C"/>
+        <circle cx="92" cy="120" r="21" fill="#0F1E38"/>
+        <circle cx="92" cy="120" r="9.5" fill="#E7B23E" stroke="none"/>
+        <circle cx="148" cy="120" r="21" fill="#0F1E38"/>
+        <circle cx="148" cy="120" r="9.5" fill="#E7B23E" stroke="none"/>
+        <path d="M120 138 l11 23 -22 0 Z" fill="#E7B23E" stroke-width="7"/>
+        <rect x="80" y="174" width="80" height="26" rx="9" fill="#0F1E38"/>
+        <line x1="98" y1="176" x2="98" y2="198" stroke="#F4EEE0" stroke-width="5"/>
+        <line x1="120" y1="176" x2="120" y2="198" stroke="#F4EEE0" stroke-width="5"/>
+        <line x1="142" y1="176" x2="142" y2="198" stroke="#F4EEE0" stroke-width="5"/>
+      </g>
+    </symbol>
+  </defs>
+</svg>
+</body>
+</html>

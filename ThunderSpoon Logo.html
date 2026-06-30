@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ThunderSpoon — Logo Exploration</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --ink:#101012; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family:'Space Grotesk', system-ui, sans-serif; }
+
+  .ab-frame { width:100%; height:100%; display:flex; align-items:center; justify-content:center; }
+  .mark { display:block; }
+  .mark path, .mark ellipse { fill: var(--ink); }
+
+  /* app icon tiles */
+  .tile { border-radius:22.5%; display:flex; align-items:center; justify-content:center; }
+  .tile.light { background:#fff; box-shadow:0 1px 0 #e7e7e7 inset, 0 8px 24px rgba(0,0,0,.08); }
+  .tile.dark { background:#101012; }
+  .tile.dark .mark path, .tile.dark .mark ellipse { fill:#fff; }
+
+  /* lockups */
+  .lockup { display:flex; align-items:center; gap:26px; }
+  .lockup.stack { flex-direction:column; gap:20px; }
+  .wm { font-weight:700; color:var(--ink); letter-spacing:-0.035em; line-height:0.9; }
+  .wm .t { font-weight:700; }
+  .wm .s { font-weight:500; color:#5b5b62; }
+  .tag { font-weight:500; letter-spacing:0.34em; text-transform:uppercase; color:#8a8a92; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+
+<template id="__bundler_thumbnail">
+  <svg viewBox="0 0 240 320" xmlns="http://www.w3.org/2000/svg">
+    <rect width="240" height="320" rx="36" fill="#101012"/>
+    <g fill="#fff">
+      <ellipse cx="120" cy="108" rx="44" ry="62"/>
+      <path d="M106 164 L142 164 L124 240 L162 240 L94 348 L114 254 L82 254 Z"/>
+    </g>
+  </svg>
+</template>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script type="text/babel" src="design-canvas.jsx"></script>
+<script type="text/babel" src="logo-app.jsx"></script>
+</body>
+</html>
