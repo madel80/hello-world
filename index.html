@@ -397,6 +397,8 @@
       border: 2px solid var(--border);
       position: relative;
       transition: transform 0.2s, box-shadow 0.2s;
+      display: flex;
+      flex-direction: column;
     }
     .pricing-card:hover { transform: translateY(-4px); box-shadow: 0 20px 60px rgba(0,0,0,0.1); }
     .pricing-card.featured {
@@ -596,8 +598,9 @@
       flex-wrap: wrap;
       gap: 16px;
     }
-    footer .footer-logo .thunder { font-size: 0.9rem; font-weight: 800; color: #fff; }
-    footer .footer-logo .spoon  { font-size: 1.1rem; font-weight: 900; color: var(--lime); }
+    footer .footer-logo { line-height: 1; }
+    footer .footer-logo .thunder { display: block; font-size: 1.1rem; font-weight: 800; color: #fff; letter-spacing: -0.5px; }
+    footer .footer-logo .spoon  { display: block; font-size: 1.4rem; font-weight: 900; color: var(--lime); letter-spacing: -1px; margin-top: -4px; }
     footer p { font-size: 0.78rem; color: rgba(255,255,255,0.3); }
 
     /* ── MODAL (Score Result) ── */
@@ -850,16 +853,12 @@
 
     <div class="hero-form">
       <h2>Get Your FREE AI Visibility Score</h2>
-      <p class="form-sub">See how visible your business is to AI — and how you stack up against your competitors.</p>
+      <p class="form-sub">See how visible your business is to AI — delivered to your inbox in minutes.</p>
 
       <form id="visibility-form" novalidate>
         <div class="form-group">
           <label for="site-url">Your Website URL</label>
           <input type="url" id="site-url" placeholder="https://yourbusiness.co.za" required />
-        </div>
-        <div class="form-group">
-          <label for="competitor-url">Your Biggest Competitor's URL <span style="font-weight:400;text-transform:none">(Optional)</span></label>
-          <input type="url" id="competitor-url" placeholder="https://theirsite.co.za" />
         </div>
         <div class="form-group">
           <label for="user-email">Your Email</label>
@@ -873,18 +872,89 @@
   </div>
 </section>
 
+<!-- ══════════ SCORE DEMO ══════════ -->
+<section id="score-section">
+  <div class="section-inner">
+    <p class="section-tag" style="color:var(--teal);">The wake-up call</p>
+    <h2>Your customers stopped Googling.<br>They started asking.</h2>
+    <p>&nbsp;</p>
+    <p class="section-sub">"Find me a [your service] near me" used to go to Google. Now it goes to ChatGPT, Perplexity, or Gemini and those tools don't rank pages, they pick winners. If your site isn't structured for AI to read and recommend, you're invisible in the one channel growing the fastest.</p>
+
+    <div style="display:flex;gap:40px;align-items:flex-end;margin-top:16px;">
+      <img src="images/Laptop_Thunderspoon.png" alt="ThunderSpoon dashboard on laptop" style="width:50%;height:auto;border-radius:16px;display:block;">
+      <img src="images/Laptop_Accounting.png" alt="Accounting dashboard on laptop" style="width:50%;height:auto;border-radius:16px;display:block;">
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ FREE SCORE CTA ══════════ -->
+<section id="free-score" style="background:linear-gradient(135deg,#00c8c8 0%,#5de88a 40%,#c8e83c 100%);padding:100px 48px;">
+  <div class="section-inner">
+    <div style="display:grid;grid-template-columns:1fr auto;gap:60px;align-items:center;">
+      <div>
+        <h2 style="font-size:clamp(2rem,4vw,3rem);font-weight:900;color:var(--dark);line-height:1.1;margin-bottom:16px;">Get Your AI Visibility Score — Free.</h2>
+        <p style="margin-bottom:28px;">&nbsp;</p>
+        <p style="font-size:1.1rem;font-weight:600;color:rgba(0,0,0,0.72);line-height:1.6;margin-bottom:36px;">Enter your website. In 30 seconds, we score it against the same 10 things AI models look for before they'll recommend a business.</p>
+        <form id="free-score-form" novalidate style="display:flex;gap:12px;flex-wrap:wrap;align-items:center;">
+          <input type="url" id="free-score-url" placeholder="Website URL" required style="flex:1;min-width:180px;padding:14px 18px;border:none;border-radius:10px;font-family:'Poppins',sans-serif;font-size:0.95rem;color:var(--dark);outline:none;">
+          <input type="email" id="free-score-email" placeholder="Email" required style="flex:1;min-width:180px;padding:14px 18px;border:none;border-radius:10px;font-family:'Poppins',sans-serif;font-size:0.95rem;color:var(--dark);outline:none;">
+          <button type="submit" style="padding:14px 28px;background:var(--dark);color:var(--lime);border:none;border-radius:10px;font-family:'Poppins',sans-serif;font-size:1rem;font-weight:800;cursor:pointer;white-space:nowrap;transition:transform 0.15s,box-shadow 0.15s;">Check My Site →</button>
+        </form>
+        <p style="font-size:1.05rem;color:rgba(0,0,0,0.5);margin-top:16px;font-weight:500;">No call, no sales pitch — just your score and what's missing.</p>
+      </div>
+      <div style="display:flex;justify-content:center;align-items:center;">
+        <svg style="width:260px;max-width:100%;filter:drop-shadow(0 20px 40px rgba(0,0,0,0.2));" viewBox="0 0 300 360" xmlns="http://www.w3.org/2000/svg" fill="none">
+          <line x1="150" y1="10" x2="150" y2="50" stroke="#111" stroke-width="6" stroke-linecap="round"/>
+          <circle cx="150" cy="8" r="10" fill="#c8e83c" stroke="#111" stroke-width="4"/>
+          <rect x="60" y="50" width="180" height="150" rx="24" fill="#fff" stroke="#111" stroke-width="6"/>
+          <rect x="85" y="85" width="48" height="44" rx="8" fill="#00c8c8" stroke="#111" stroke-width="4"/>
+          <circle cx="109" cy="107" r="14" fill="#111"/>
+          <circle cx="115" cy="101" r="5" fill="#fff"/>
+          <rect x="167" y="85" width="48" height="44" rx="8" fill="#00c8c8" stroke="#111" stroke-width="4"/>
+          <circle cx="191" cy="107" r="14" fill="#111"/>
+          <circle cx="197" cy="101" r="5" fill="#fff"/>
+          <polygon points="150,140 138,162 162,162" fill="#c8e83c" stroke="#111" stroke-width="3"/>
+          <rect x="88" y="168" width="16" height="12" rx="2" fill="#00c8c8"/>
+          <rect x="112" y="168" width="16" height="12" rx="2" fill="#111"/>
+          <rect x="136" y="168" width="16" height="12" rx="2" fill="#c8e83c"/>
+          <rect x="160" y="168" width="16" height="12" rx="2" fill="#111"/>
+          <rect x="184" y="168" width="16" height="12" rx="2" fill="#00c8c8"/>
+          <rect x="30" y="90" width="32" height="50" rx="10" fill="#fff" stroke="#111" stroke-width="5"/>
+          <circle cx="46" cy="115" r="10" fill="#c8e83c" stroke="#111" stroke-width="3"/>
+          <rect x="238" y="90" width="32" height="50" rx="10" fill="#fff" stroke="#111" stroke-width="5"/>
+          <circle cx="254" cy="115" r="10" fill="#c8e83c" stroke="#111" stroke-width="3"/>
+          <rect x="128" y="200" width="44" height="24" rx="6" fill="#fff" stroke="#111" stroke-width="5"/>
+          <rect x="55" y="224" width="190" height="120" rx="20" fill="#fff" stroke="#111" stroke-width="6"/>
+          <rect x="80" y="248" width="28" height="20" rx="4" fill="#00c8c8" opacity="0.9"/>
+          <rect x="116" y="248" width="28" height="20" rx="4" fill="#c8e83c" opacity="0.9"/>
+          <rect x="152" y="248" width="28" height="20" rx="4" fill="#111" opacity="0.9"/>
+          <rect x="188" y="248" width="28" height="20" rx="4" fill="#00c8c8" opacity="0.9"/>
+          <rect x="80" y="276" width="28" height="20" rx="4" fill="#111" opacity="0.6"/>
+          <rect x="116" y="276" width="28" height="20" rx="4" fill="#00c8c8" opacity="0.6"/>
+          <rect x="152" y="276" width="28" height="20" rx="4" fill="#c8e83c" opacity="0.6"/>
+          <rect x="188" y="276" width="28" height="20" rx="4" fill="#111" opacity="0.6"/>
+          <line x1="240" y1="290" x2="290" y2="240" stroke="#c8e83c" stroke-width="8" stroke-linecap="round"/>
+          <ellipse cx="285" cy="235" rx="18" ry="12" fill="#c8e83c" stroke="#111" stroke-width="3" transform="rotate(-45 285 235)"/>
+          <rect x="18" y="234" width="40" height="22" rx="11" fill="#fff" stroke="#111" stroke-width="5"/>
+          <rect x="242" y="234" width="40" height="22" rx="11" fill="#fff" stroke="#111" stroke-width="5"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ══════════ HOW IT WORKS ══════════ -->
 <section id="how">
   <div class="section-inner">
     <p class="section-tag">The process</p>
-    <h2>Simple. Fast.<br>No jargon.</h2>
+    <h2>Simple. Fast. <span style="color:var(--lime);">No Jargon.</span></h2>
     <p class="section-sub">We teach robots where the good stuff is. Your website has something to say — AI should hear it.</p>
 
     <div class="steps">
       <div class="step">
         <div class="step-num">01</div>
         <h3>Enter your website</h3>
-        <p>Drop in your URL and your competitor's (optional). Takes 10 seconds.</p>
+        <p>Drop in your URL. Takes 10 seconds.</p>
       </div>
       <div class="step">
         <div class="step-num">02</div>
@@ -901,34 +971,6 @@
         <h3>You install it</h3>
         <p>We give you simple step-by-step instructions. Or we do it for you.</p>
       </div>
-      <div class="step">
-        <div class="step-num">05</div>
-        <h3>AI finds your business</h3>
-        <p>ChatGPT, Gemini and Claude start recommending you instead of your competitors.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══════════ SCORE DEMO ══════════ -->
-<section id="score-section">
-  <div class="section-inner">
-    <p class="section-tag" style="color:var(--teal);">The wake-up call</p>
-    <h2>Who Is AI Feeding Right Now?</h2>
-    <p class="section-sub">Right now, when your customers ask ChatGPT for recommendations, they're being spoon-fed your competitor. We show you exactly what's happening.</p>
-
-    <div class="score-demo">
-      <div style="display:flex;align-items:center;justify-content:center;">
-        <img src="images/Laptop_Thunderspoon.png" alt="ThunderSpoon dashboard on laptop" style="width:100%;max-width:520px;height:auto;border-radius:16px;">
-      </div>
-
-      <div class="score-summary">
-        <h3>ChatGPT is recommending your competitor. Not you.</h3>
-        <p>When your clients ask ChatGPT for recommendations, is your business showing up? Right now, ChatGPT is recommending your competitors because it can't read your website properly.</p>
-        <p>We fix that. Once-off. No retainers. No jargon. No monthly debit orders.</p>
-        <p style="font-size:0.8rem;color:rgba(255,255,255,0.4);">For less than half a tank of petrol, you can make sure ChatGPT actually knows your business exists.</p>
-        <a href="#pricing" class="btn-lime">Fix My Score — From R499</a>
-      </div>
     </div>
   </div>
 </section>
@@ -937,41 +979,24 @@
 <section id="why">
   <div class="section-inner">
     <div>
-      <p class="section-tag" style="color:rgba(0,0,0,0.5);">Why Thunderspoon</p>
-      <h2>We're not another SEO agency.</h2>
+<h2>How We Score You — No Black Box</h2>
       <p>Most SEO agencies charge R5,000–R20,000 per month and deliver vague reports full of graphs nobody understands.</p>
       <blockquote class="big-quote">"Spoon-feed your business directly to the AI."</blockquote>
-      <p>ThunderSpoon delivers a tangible digital product — your AI Visibility Score, a custom file that makes your site readable to AI, and three actionable fixes — for a flat once-off fee.</p>
+      <p>Most "AI SEO" tools give you a number and ask you to trust it. We publish the whole checklist. You can check these yourself, right now, before you ever pay us.</p>
+      <p style="margin-top:16px;">Each item = 1 point. Your score is just the total. That's it.</p>
     </div>
-    <div class="why-pillars">
-      <div class="pillar">
-        <div class="pillar-icon">⚡</div>
-        <div>
-          <h3>Once-off fee. No retainers.</h3>
-          <p>No monthly debit orders. No lock-in contracts. Pay once, get results. That's it.</p>
-        </div>
-      </div>
-      <div class="pillar">
-        <div class="pillar-icon">🤖</div>
-        <div>
-          <h3>Built for ChatGPT's world</h3>
-          <p>Traditional SEO targets Google. We make your website readable to the AI tools your customers actually use.</p>
-        </div>
-      </div>
-      <div class="pillar">
-        <div class="pillar-icon">📦</div>
-        <div>
-          <h3>A real, tangible product</h3>
-          <p>You get an AI Visibility Score, a custom AI file, and 3 quick fixes — not a vague monthly report.</p>
-        </div>
-      </div>
-      <div class="pillar">
-        <div class="pillar-icon">🇿🇦</div>
-        <div>
-          <h3>Built for South African businesses</h3>
-          <p>From plumbers in Polokwane to lawyers in Sandton — plain language, local pricing, real results.</p>
-        </div>
-      </div>
+    <div style="display:flex;flex-direction:column;gap:12px;">
+      <p style="font-size:0.75rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(0,0,0,0.45);margin-bottom:8px;">The 10-Point Checklist</p>
+      <div style="background:rgba(0,0,0,0.08);border-radius:12px;padding:16px 20px;display:flex;gap:14px;align-items:flex-start;"><span style="font-size:1.1rem;font-weight:900;color:var(--dark);flex-shrink:0;min-width:24px;">1.</span><span style="font-size:0.9rem;color:rgba(0,0,0,0.75);font-weight:500;line-height:1.5;">Has an <code>llms.txt</code> file</span></div>
+      <div style="background:rgba(0,0,0,0.08);border-radius:12px;padding:16px 20px;display:flex;gap:14px;align-items:flex-start;"><span style="font-size:1.1rem;font-weight:900;color:var(--dark);flex-shrink:0;min-width:24px;">2.</span><span style="font-size:0.9rem;color:rgba(0,0,0,0.75);font-weight:500;line-height:1.5;">Has a <code>sitemap.xml</code></span></div>
+      <div style="background:rgba(0,0,0,0.08);border-radius:12px;padding:16px 20px;display:flex;gap:14px;align-items:flex-start;"><span style="font-size:1.1rem;font-weight:900;color:var(--dark);flex-shrink:0;min-width:24px;">3.</span><span style="font-size:0.9rem;color:rgba(0,0,0,0.75);font-weight:500;line-height:1.5;">Has Organization schema markup</span></div>
+      <div style="background:rgba(0,0,0,0.08);border-radius:12px;padding:16px 20px;display:flex;gap:14px;align-items:flex-start;"><span style="font-size:1.1rem;font-weight:900;color:var(--dark);flex-shrink:0;min-width:24px;">4.</span><span style="font-size:0.9rem;color:rgba(0,0,0,0.75);font-weight:500;line-height:1.5;">Has LocalBusiness or Service schema markup</span></div>
+      <div style="background:rgba(0,0,0,0.08);border-radius:12px;padding:16px 20px;display:flex;gap:14px;align-items:flex-start;"><span style="font-size:1.1rem;font-weight:900;color:var(--dark);flex-shrink:0;min-width:24px;">5.</span><span style="font-size:0.9rem;color:rgba(0,0,0,0.75);font-weight:500;line-height:1.5;">Has FAQPage schema markup</span></div>
+      <div style="background:rgba(0,0,0,0.08);border-radius:12px;padding:16px 20px;display:flex;gap:14px;align-items:flex-start;"><span style="font-size:1.1rem;font-weight:900;color:var(--dark);flex-shrink:0;min-width:24px;">6.</span><span style="font-size:0.9rem;color:rgba(0,0,0,0.75);font-weight:500;line-height:1.5;"><code>&lt;title&gt;</code> tag describes what the business actually does (not "Home")</span></div>
+      <div style="background:rgba(0,0,0,0.08);border-radius:12px;padding:16px 20px;display:flex;gap:14px;align-items:flex-start;"><span style="font-size:1.1rem;font-weight:900;color:var(--dark);flex-shrink:0;min-width:24px;">7.</span><span style="font-size:0.9rem;color:rgba(0,0,0,0.75);font-weight:500;line-height:1.5;">H1 names the service + location</span></div>
+      <div style="background:rgba(0,0,0,0.08);border-radius:12px;padding:16px 20px;display:flex;gap:14px;align-items:flex-start;"><span style="font-size:1.1rem;font-weight:900;color:var(--dark);flex-shrink:0;min-width:24px;">8.</span><span style="font-size:0.9rem;color:rgba(0,0,0,0.75);font-weight:500;line-height:1.5;">Meta description is present and under 160 characters</span></div>
+      <div style="background:rgba(0,0,0,0.08);border-radius:12px;padding:16px 20px;display:flex;gap:14px;align-items:flex-start;"><span style="font-size:1.1rem;font-weight:900;color:var(--dark);flex-shrink:0;min-width:24px;">9.</span><span style="font-size:0.9rem;color:rgba(0,0,0,0.75);font-weight:500;line-height:1.5;"><code>robots.txt</code> doesn't block AI crawlers (GPTBot, ClaudeBot, PerplexityBot, etc.)</span></div>
+      <div style="background:rgba(0,0,0,0.08);border-radius:12px;padding:16px 20px;display:flex;gap:14px;align-items:flex-start;"><span style="font-size:1.1rem;font-weight:900;color:var(--dark);flex-shrink:0;min-width:24px;">10.</span><span style="font-size:0.9rem;color:rgba(0,0,0,0.75);font-weight:500;line-height:1.5;">About/Services page has real structured text content, not just images</span></div>
     </div>
   </div>
 </section>
@@ -980,8 +1005,8 @@
 <section id="pricing">
   <div class="section-inner">
     <p class="section-tag" style="color:var(--teal);">Pricing</p>
-    <h2>Simple, once-off pricing.</h2>
-    <p class="section-sub">No monthly subscriptions. No hidden fees. Choose your level — DIY or done for you.</p>
+    <h2>Spoon-Feed the AI. One Fee. No Subscription.</h2>
+    <p class="section-sub">We're not selling you a retainer. We're selling you a fixed, finished thing.</p>
 
     <div class="pricing-cards">
 
@@ -990,19 +1015,21 @@
         <p class="card-tier">Tier 1</p>
         <h3 class="card-name">The Thunderspoon Drop</h3>
         <div class="card-price-wrap">
-          <div class="card-price">R499</div>
+          <div class="card-price">R999</div>
           <p class="card-price-sub">Once-off · No subscription · No surprises</p>
         </div>
+        <p style="font-size:0.85rem;font-weight:600;color:#444;margin-bottom:6px;">Delivered as a branded PDF + zip file within 24 hours.</p>
+        <p style="font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#888;margin-bottom:12px;">What's included:</p>
         <ul class="card-features">
-          <li>AI Visibility Score for your website</li>
-          <li>Competitor comparison (if provided)</li>
-          <li>Custom AI-readable file for your site</li>
-          <li>3 Quick Fixes to boost your score</li>
-          <li>Step-by-step installation instructions</li>
-          <li>Delivered to your inbox within 24 hours</li>
+          <li>Your AI Visibility Score (against the published 10-point rubric)</li>
+          <li>A custom <code>llms.txt</code> file, ready to upload</li>
+          <li>A custom schema.org JSON-LD block (Organization + LocalBusiness or Service)</li>
+          <li>3 prioritized on-page fixes (title, H1, meta description, FAQ section)</li>
+          <li>A rewritten /about or homepage intro, optimized for how AI models parse content</li>
+          <li>A plain-English install guide for your platform</li>
         </ul>
         <p class="card-note">Perfect for businesses with an in-house developer, agency, or anyone comfortable with basic website access.</p>
-        <a href="#hero" class="btn-card">Get The Drop</a>
+        <a href="#hero" class="btn-card" style="margin-top:auto;">Get my AI Readiness Pack</a>
       </div>
 
       <!-- TIER 2 -->
@@ -1014,32 +1041,77 @@
           <div class="card-price">R1,499</div>
           <p class="card-price-sub">Once-off · We do it all for you</p>
         </div>
+        <p style="font-size:0.85rem;font-weight:600;color:rgba(255,255,255,0.85);margin-bottom:6px;">Everything in Tier 1, plus we install it for you.</p>
+        <p style="font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,0.45);margin-bottom:12px;">What's included:</p>
         <ul class="card-features">
-          <li>Everything in The Thunderspoon Drop</li>
-          <li>Done-for-you implementation</li>
-          <li>We install the file on your website</li>
-          <li>Works on WordPress, Shopify, Webflow &amp; Squarespace</li>
-          <li>Zero tech headaches — we handle it all</li>
+          <li>Everything in the AI Readiness Pack</li>
+          <li>Done-for-you install on WordPress, Shopify, or Squarespace</li>
+          <li>A short intake form (we confirm your platform and access before you pay)</li>
+          <li>A 7-day post-install check</li>
         </ul>
-        <p class="card-note">For WordPress, Shopify, Webflow &amp; Squarespace only. Custom builds purchase Tier 1.</p>
-        <a href="#hero" class="btn-card">Get The Setup</a>
+        <a href="#hero" class="btn-card" style="margin-top:auto;">Get The Setup</a>
       </div>
 
     </div>
 
-    <div style="margin-top:40px;padding:28px 32px;background:#f7f9fc;border-radius:16px;max-width:860px;">
-      <p style="font-size:0.92rem;color:#555;line-height:1.7;">
-        <strong style="color:var(--dark);">The perspective check:</strong> You spend R5,000 to put an ad in a local magazine that gets thrown away. For R499 once-off, you can put your business directly inside the AI tools your customers are using every day. It's cheaper than a tank of petrol.
-      </p>
+    <div style="margin-top:40px;max-width:860px;display:flex;flex-direction:column;gap:16px;">
+      <div style="padding:28px 32px;background:#f7f9fc;border-radius:16px;">
+        <p style="font-size:0.95rem;color:#555;line-height:1.8;">We deliver the files and fixes within 24 hours. We don't promise rankings — no one honestly can. We promise your site will be measurably easier for AI to read and recommend.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ══════════ CTA ══════════ -->
-<section id="cta">
-  <h2>Stop letting AI <span>feed your competitors.</span></h2>
-  <p>Get your free AI Visibility Score today. Find out where you stand in under 60 seconds.</p>
-  <a href="#hero" class="btn-lime" style="display:inline-block;font-size:1.1rem;padding:18px 40px;">Check My Site — It's Free ⚡</a>
+<!-- ══════════ TESTIMONIAL ══════════ -->
+<section id="testimonial" style="padding:100px 48px;background:linear-gradient(135deg,#00c8c8 0%,#5de88a 40%,#c8e83c 100%);">
+  <div class="section-inner">
+    <h2 style="font-size:clamp(2rem,4vw,3rem);font-weight:900;color:var(--dark);line-height:1.1;margin-bottom:48px;">Before and After</h2>
+
+    <!-- Image + quote -->
+    <div style="display:grid;grid-template-columns:auto 1fr;gap:56px;align-items:center;">
+      <img src="images/drivediva.png" alt="DriveDiva" style="width:280px;height:auto;border-radius:20px;display:block;">
+      <div>
+        <p style="font-size:1.25rem;font-weight:400;color:var(--dark);line-height:1.65;font-style:italic;margin-bottom:24px;">"Our website traffic was taking a dip and we had no idea why. Thunderspoon came to our rescue and informed us why it was needed to get ready for how AI search picks up your site. We are forever grateful."</p>
+        <p style="font-size:1rem;font-weight:700;color:var(--dark);">Jessica van Loggerenberg <span style="font-weight:400;color:#fff;">— CEO of DriveDiva</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ FAQ ══════════ -->
+<section id="faq" style="padding:100px 48px;background:var(--dark);color:#fff;">
+  <div class="section-inner" style="max-width:760px;">
+    <p class="section-tag" style="color:var(--lime);">Common questions</p>
+
+    <div style="display:flex;flex-direction:column;gap:32px;margin-top:40px;">
+
+      <div>
+        <h3 style="font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:10px;">Will this guarantee ChatGPT recommends me?</h3>
+        <p style="font-size:0.95rem;color:rgba(255,255,255,0.7);line-height:1.75;">No. Nothing legitimately can. What we guarantee is that your site becomes structured in the specific ways AI models look for before they'll consider recommending you — the same things on our published rubric.</p>
+      </div>
+
+      <div>
+        <h3 style="font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:10px;">What's llms.txt?</h3>
+        <p style="font-size:0.95rem;color:rgba(255,255,255,0.7);line-height:1.75;">A file that tells AI crawlers what your business does, in language they can use directly. It's one piece of a bigger picture — which is why our pack includes schema markup and content fixes too, not just this one file.</p>
+      </div>
+
+      <div>
+        <h3 style="font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:10px;">Do I need to know how to code?</h3>
+        <p style="font-size:0.95rem;color:rgba(255,255,255,0.7);line-height:1.75;">No. Tier 1 comes with plain-English install instructions per platform. Tier 2, we install it for you.</p>
+      </div>
+
+      <div>
+        <h3 style="font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:10px;">Is this a subscription?</h3>
+        <p style="font-size:0.95rem;color:rgba(255,255,255,0.7);line-height:1.75;">No. One fee, one delivery. The only ongoing option is the Agency Pack, and that's a bulk one-off too.</p>
+      </div>
+
+      <div>
+        <h3 style="font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:10px;">What platforms do you support for done-for-you install?</h3>
+        <p style="font-size:0.95rem;color:rgba(255,255,255,0.7);line-height:1.75;">WordPress, Shopify, Webflow, and Squarespace. If you're on something else, Tier 1's self-install guide will still work — most platforms let you add files and meta tags somewhere in settings.</p>
+      </div>
+
+    </div>
+  </div>
 </section>
 
 <!-- ══════════ FOOTER ══════════ -->
@@ -1048,7 +1120,13 @@
     <div class="thunder">thunder</div>
     <div class="spoon">spoon</div>
   </div>
-  <p>Making your website easier for robots to understand since 2026.</p>
+  <div style="display:flex;flex-direction:column;gap:10px;align-items:flex-start;">
+    <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;">
+      <p style="font-size:1rem;font-weight:700;color:#fff;">Stop letting AI feed your competitor.</p>
+      <a href="#hero" class="btn-lime" style="font-size:0.9rem;padding:12px 24px;">Check My Site Free</a>
+    </div>
+    <p style="font-size:0.78rem;color:rgba(255,255,255,0.4);">30 seconds. No card required.</p>
+  </div>
   <p style="color:rgba(255,255,255,0.2);font-size:0.72rem;">© 2026 ThunderSpoon. All rights reserved.</p>
 </footer>
 
@@ -1066,26 +1144,20 @@
     </div>
 
     <div class="modal-intro">
-      Thank you for taking the time to view your score. Your result shows the probability that AI systems like ChatGPT can find and understand your website. <strong>As you can see, your competitor is currently ranking higher.</strong> To make sure this status changes, it's time to take action.
+      Thank you for taking the time to view your score. Your result shows the probability that AI systems like ChatGPT can find and understand your website. To make sure this changes, it's time to take action.
     </div>
 
-    <div class="modal-scores">
+    <div class="modal-scores" style="grid-template-columns:1fr;">
       <div class="modal-score-card yours-m">
         <span class="modal-score-url" id="modal-your-url">yourbusiness.co.za</span>
         <p class="modal-score-label">your score</p>
         <div class="modal-score-num">40%</div>
         <div class="modal-bar-wrap"><div class="modal-bar" style="width:40%"></div></div>
       </div>
-      <div class="modal-score-card theirs-m" id="modal-competitor-section">
-        <span class="modal-score-url" id="modal-their-url">competitor.co.za</span>
-        <p class="modal-score-label">your competitor's score</p>
-        <div class="modal-score-num">70%</div>
-        <div class="modal-bar-wrap"><div class="modal-bar" style="width:70%"></div></div>
-      </div>
     </div>
 
     <p class="modal-message">
-      Right now, when your customers ask ChatGPT for recommendations, they are being spoon-fed your competitor. For a once-off fee of <strong>R499</strong>, we will give you the AI file and the 3 quick fixes you need to intercept those recommendations.
+      Right now, when your customers ask ChatGPT for recommendations, they are being spoon-fed your competitor. For a once-off fee of <strong>R999</strong>, we will give you the AI file and the 3 quick fixes you need to intercept those recommendations.
     </p>
 
     <button class="btn-modal-cta" onclick="goToPricing()">I Want to Change My Score ⚡</button>
@@ -1115,7 +1187,6 @@
   document.getElementById('visibility-form').addEventListener('submit', function(e) {
     e.preventDefault();
     const siteUrl = document.getElementById('site-url').value.trim();
-    const compUrl = document.getElementById('competitor-url').value.trim();
     const email   = document.getElementById('user-email').value.trim();
 
     if (!siteUrl || !email) {
@@ -1123,25 +1194,12 @@
       return;
     }
 
-    // Populate modal with entered URLs
+    // Populate modal with entered URL
     try {
       const siteHost = new URL(siteUrl.startsWith('http') ? siteUrl : 'https://' + siteUrl).hostname;
       document.getElementById('modal-your-url').textContent = siteHost;
     } catch(err) {
       document.getElementById('modal-your-url').textContent = siteUrl;
-    }
-
-    const compSection = document.getElementById('modal-competitor-section');
-    if (compUrl) {
-      try {
-        const compHost = new URL(compUrl.startsWith('http') ? compUrl : 'https://' + compUrl).hostname;
-        document.getElementById('modal-their-url').textContent = compHost;
-      } catch(err) {
-        document.getElementById('modal-their-url').textContent = compUrl;
-      }
-      compSection.style.display = 'block';
-    } else {
-      compSection.style.display = 'none';
     }
 
     document.getElementById('score-modal').classList.add('active');
@@ -1183,6 +1241,24 @@
 
   const scoreSection = document.getElementById('score-section');
   if (scoreSection) observer.observe(scoreSection);
+
+  // Second form (free score section) → same score modal
+  document.getElementById('free-score-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const siteUrl = document.getElementById('free-score-url').value.trim();
+    const email   = document.getElementById('free-score-email').value.trim();
+    if (!siteUrl || !email) {
+      alert('Please enter your website URL and email address.');
+      return;
+    }
+    try {
+      const siteHost = new URL(siteUrl.startsWith('http') ? siteUrl : 'https://' + siteUrl).hostname;
+      document.getElementById('modal-your-url').textContent = siteHost;
+    } catch(err) {
+      document.getElementById('modal-your-url').textContent = siteUrl;
+    }
+    document.getElementById('score-modal').classList.add('active');
+  });
 </script>
 
 </body>
